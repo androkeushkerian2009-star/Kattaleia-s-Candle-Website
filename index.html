@@ -217,5 +217,28 @@
     © 2026 Kattaleia's Candle | Follow us on Instagram & TikTok
   </footer>
 
+
+<script>
+const endDate = new Date("April 30, 2026 23:59:59").getTime();
+
+const timer = setInterval(function() {
+
+  const now = new Date().getTime();
+  const distance = endDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  document.getElementById("timer").innerHTML =
+    days + "d " + hours + "h " + minutes + "m ";
+
+  if (distance < 0) {
+    clearInterval(timer);
+    document.getElementById("easterSpecial").style.display = "none";
+  }
+
+}, 1000);
+</script>
 </body>
 </html>
