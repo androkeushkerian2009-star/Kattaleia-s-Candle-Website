@@ -317,6 +317,22 @@ const timer = setInterval(function() {
   }
 
 }, 1000);
+
+// Clickable Egg Interaction
+const clickEgg = document.getElementById("clickEgg");
+const eggSurprise = document.getElementById("eggSurprise");
+
+clickEgg.addEventListener("click", () => {
+  // Egg cracks effect
+  clickEgg.textContent = "🥚💥";
+  setTimeout(() => {
+    clickEgg.style.display = "none";
+    eggSurprise.style.display = "block";
+  }, 500);
+});
+
 </script>
+
+
 </body>
 </html>
