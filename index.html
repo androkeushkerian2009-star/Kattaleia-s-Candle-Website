@@ -165,25 +165,25 @@
   transform: scale(1.05);
   opacity: 0.9;
 }
+
+
+
 /* Floating Eggs Animation */
 .float-egg {
   position: absolute;
-  bottom: -30px;
   font-size: 30px;
   animation: floatUp 6s infinite ease-in-out;
 }
 
 @keyframes floatUp {
   0% { transform: translateY(0) rotate(0deg);}
-  50% { transform: translateY(-100px) rotate(180deg);}
+  50% { transform: translateY(-50px) rotate(180deg);}
   100% { transform: translateY(0) rotate(360deg);}
 }
 
 /* Bunny Animation */
 .fun-bunny {
   position: absolute;
-  right: 20px;
-  bottom: 10px;
   font-size: 60px;
   animation: hop 2s infinite;
 }
@@ -193,6 +193,27 @@
   50% { transform: translateY(-30px); }
   100% { transform: translateY(0); }
 }
+
+/* Clickable Eggs */
+.clickEgg {
+  position: absolute;
+  font-size: 50px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.clickEgg:hover {
+  transform: scale(1.2);
+}
+
+.eggSurprise {
+  position: absolute;
+  display: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff4fa3;
+}
+
 
   </style>
 </head>
