@@ -165,6 +165,34 @@
   transform: scale(1.05);
   opacity: 0.9;
 }
+/* Floating Eggs Animation */
+.float-egg {
+  position: absolute;
+  bottom: -30px;
+  font-size: 30px;
+  animation: floatUp 6s infinite ease-in-out;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg);}
+  50% { transform: translateY(-100px) rotate(180deg);}
+  100% { transform: translateY(0) rotate(360deg);}
+}
+
+/* Bunny Animation */
+.fun-bunny {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-size: 60px;
+  animation: hop 2s infinite;
+}
+
+@keyframes hop {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
 
   </style>
 </head>
