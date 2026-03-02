@@ -168,53 +168,6 @@
 
 
 
-/* Floating Eggs Animation */
-.float-egg {
-  position: absolute;
-  font-size: 30px;
-  animation: floatUp 6s infinite ease-in-out;
-}
-
-@keyframes floatUp {
-  0% { transform: translateY(0) rotate(0deg);}
-  50% { transform: translateY(-50px) rotate(180deg);}
-  100% { transform: translateY(0) rotate(360deg);}
-}
-
-/* Bunny Animation */
-.fun-bunny {
-  position: absolute;
-  font-size: 60px;
-  animation: hop 2s infinite;
-}
-
-@keyframes hop {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-30px); }
-  100% { transform: translateY(0); }
-}
-
-/* Clickable Eggs */
-.clickEgg {
-  position: absolute;
-  font-size: 50px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.clickEgg:hover {
-  transform: scale(1.2);
-}
-
-.eggSurprise {
-  position: absolute;
-  display: none;
-  font-size: 30px;
-  font-weight: bold;
-  color: #ff4fa3;
-}
-
-
   </style>
 </head>
 
@@ -246,37 +199,6 @@
     </nav>
   </header>
 
-
-
-
-<!-- 🌸 FULL PAGE FUN EASTER SECTION -->
-<div id="funEaster" style="position: relative; height: 600px; overflow: hidden;">
-
-  <!-- Floating Eggs (spread all over) -->
-  <div class="float-egg" style="left: 5%; top: 50%;">🥚</div>
-  <div class="float-egg" style="left: 20%; top: 30%;">🥚</div>
-  <div class="float-egg" style="left: 35%; top: 60%;">🥚</div>
-  <div class="float-egg" style="left: 50%; top: 40%;">🥚</div>
-  <div class="float-egg" style="left: 65%; top: 50%;">🥚</div>
-  <div class="float-egg" style="left: 80%; top: 35%;">🥚</div>
-  <div class="float-egg" style="left: 10%; top: 20%;">🥚</div>
-  <div class="float-egg" style="left: 75%; top: 70%;">🥚</div>
-
-  <!-- Bunnies hopping around -->
-  <div class="fun-bunny" style="left: 15%; bottom: 10%;">🐇</div>
-  <div class="fun-bunny" style="left: 70%; bottom: 20%;">🐇</div>
-
-  <!-- Clickable Eggs -->
-  <div id="clickEgg1" class="clickEgg" style="left: 25%; top: 50%;">🥚</div>
-  <div id="clickEgg2" class="clickEgg" style="left: 55%; top: 30%;">🥚</div>
-  <div id="clickEgg3" class="clickEgg" style="left: 40%; top: 70%;">🥚</div>
-
-  <!-- Surprises -->
-  <div id="eggSurprise1" class="eggSurprise">🐥 Happy Easter! 🌸</div>
-  <div id="eggSurprise2" class="eggSurprise">🌼 Spring Vibes! 🐣</div>
-  <div id="eggSurprise3" class="eggSurprise">🍬 Sweet Treats Inside!</div>
-
-</div>
 
 
 
@@ -345,23 +267,6 @@ const timer = setInterval(function() {
 
 }, 1000);
 
-// Clickable Egg Interaction
-function setupEgg(eggId, surpriseId) {
-  const egg = document.getElementById(eggId);
-  const surprise = document.getElementById(surpriseId);
-  
-  egg.addEventListener("click", () => {
-    egg.textContent = "🥚💥";
-    setTimeout(() => {
-      egg.style.display = "none";
-      surprise.style.display = "block";
-    }, 500);
-  });
-}
-
-setupEgg("clickEgg1","eggSurprise1");
-setupEgg("clickEgg2","eggSurprise2");
-setupEgg("clickEgg3","eggSurprise3");
 
 </script>
 
